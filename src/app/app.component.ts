@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'newfeaturesangular';
   totalMarks  = 1000
 get percentage() {
     return this.totalMarks / 600;
