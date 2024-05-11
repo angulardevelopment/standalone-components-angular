@@ -6,6 +6,9 @@ import { StandaloneDemoComponent } from './standalone-demo/standalone-demo.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestModule } from './test/test.module';
 import { AppRoutingModule } from './app-routing.module';
+import { DummyComponent } from './dummy/dummy.component';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,10 +16,14 @@ import { AppRoutingModule } from './app-routing.module';
     // DummyComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
+    AppRoutingModule,
+    
     StandaloneDemoComponent,
     TestModule,
-    AppRoutingModule,
+  
+    
     // BrowserAnimationsModule
   ],
   providers: [],

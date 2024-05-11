@@ -7,7 +7,9 @@ import { DummyComponent } from '../dummy/dummy.component';
 
 
   selector: 'app-standalone-demo',
+
   // imports: [DummyComponent],
+
   // imports: [MatButtonModule],
 
   templateUrl: './standalone-demo.component.html',

@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Route } from '@angular/router';
+import { Route, RouterModule } from '@angular/router';
+import { DummyComponent } from './dummy/dummy.component';
 
 export const ROUTES: Route[] = [
-  {path: 'admin', loadComponent: () => import('./dummy/dummy.component').then(mod => mod.DummyComponent)},
+
+  {
+  // path: 'admin', 
+  path: '', 
+
+  loadComponent: () => import('./dummy/dummy.component').then(mod => mod.DummyComponent)},
   // ...
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    // DummyComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(ROUTES),
+
   ]
 })
 export class AppRoutingModule { }

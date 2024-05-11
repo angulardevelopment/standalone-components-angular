@@ -1,3 +1,9 @@
 
-<app-standalone-demo></app-standalone-demo>
-{{percentage}}
+<!-- <app-standalone-demo></app-standalone-demo>
+{{percentage}} -->
+
+<button (click)="loadForm()">lazy</button>
+
+<div #formComponent></div>
+<router-outlet></router-outlet>
+
