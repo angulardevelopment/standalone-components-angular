@@ -14,10 +14,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class DummyComponent implements OnInit {
   demo = 'next';
-  // constructor(@Inject('APP_CONFIG') public config: string) {
-  //   console.log(config)
+  constructor(@Inject('APP_CONFIG') public config: string) {
+    console.log(config)
 
-  // }
+  }
 // private userService: AppService, 
   ngOnInit(): void {
     console.log(this)
