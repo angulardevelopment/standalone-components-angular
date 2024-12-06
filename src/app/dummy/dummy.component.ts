@@ -1,15 +1,15 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { APP_CONFIG } from '../src/main';
+import { APP_CONFIG } from '../app.config';
 // import { AppService } from '../app.service';
 
 @Component({
   standalone: true,
-
+  imports: [FormsModule],
   selector: 'app-dummy',
   templateUrl: './dummy.component.html',
   styleUrls: ['./dummy.component.scss'],
-    // imports: [ FormsModule],
+providers: [{ provide: 'APP_CONFIG', useValue: APP_CONFIG },]
 
 })
 export class DummyComponent implements OnInit {

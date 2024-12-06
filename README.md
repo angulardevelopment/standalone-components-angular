@@ -20,6 +20,7 @@ I'm Sam, and I'm passionate about product engineering and web development. I cre
 
 ### About the app
 standalone components demo.
+https://stackblitz.com/edit/angular-ivy-gyt19n - old way to use modules.
 
 ## Subscribe and Stay Updated!
 

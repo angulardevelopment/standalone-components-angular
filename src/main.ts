@@ -10,267 +10,267 @@ import { environment } from './environments/environment';
 //   enableProdMode();
 // }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+// platformBrowserDynamic().bootstrapModule(AppModule)
+//   .catch(err => console.error(err));
 
-// bootstrapApplication(DummyComponent);
-Old Way
+bootstrapApplication(DummyComponent);
+// Old Way
 
-main.ts
+// main.ts
 
-platformBrowserDynamic()
+// platformBrowserDynamic()
 
-.bootstrapModule(AppModule)
+// .bootstrapModule(AppModule)
 
-.catch((err) =>  console.error(err));
+// .catch((err) =>  console.error(err));
 
-app.module.ts
+// app.module.ts
 
-const routes: Route[] = [
+// const routes: Route[] = [
 
-  {
+//   {
 
-    'path': 'my-feature',
+//     'path': 'my-feature',
 
-    'loadChildren': () => import('./my-feature/my-feature.module').then(m => m.MyModule)
+//     'loadChildren': () => import('./my-feature/my-feature.module').then(m => m.MyModule)
 
-  },
+//   },
 
-  {
+//   {
 
-    'path': '',
+//     'path': '',
 
-    redirectTo: 'my-feature'
+//     redirectTo: 'my-feature'
 
-  }
+//   }
 
-];
+// ];
 
-@NgModule({
+// @NgModule({
 
-  imports: [
+//   imports: [
 
-    RouterModule.forRoot(routes),
+//     RouterModule.forRoot(routes),
 
-    StoreModule.forRoot({})
+//     StoreModule.forRoot({})
 
-  ]
+//   ]
 
-})
+// })
 
-export class AppModule{}
+// export class AppModule{}
 
-my-feature.ts
+// my-feature.ts
 
-const routes: Route[] = [
+// const routes: Route[] = [
 
-  {
+//   {
 
-    path: 'comp-one',
+//     path: 'comp-one',
 
-    component: ComponentOne
+//     component: ComponentOne
 
-  },
+//   },
 
-  {
+//   {
 
-    path: '',
+//     path: '',
 
-    component: ComponentTwo,
+//     component: ComponentTwo,
 
-    pathMatch: 'full'
+//     pathMatch: 'full'
 
-  }
+//   }
 
-];
+// ];
 
-@NgModule({
+// @NgModule({
 
-  imports: [
+//   imports: [
 
-    CommonModule,
+//     CommonModule,
 
-    RouterModule.forFeature(routes),
+//     RouterModule.forFeature(routes),
 
-    StoreModule.forFeature('my-feature', featureReducer)
+//     StoreModule.forFeature('my-feature', featureReducer)
 
-  ]
+//   ]
 
-})
+// })
 
-export class FeatureOne{}
+// export class FeatureOne{}
 
-New Way
+// New Way
 
-my-feature.routes.ts
+// my-feature.routes.ts
 
-const MY_FEATURE_ROUTES: Route[] = [
+// const MY_FEATURE_ROUTES: Route[] = [
 
-  {
+//   {
 
-    path: 'comp-one',
+//     path: 'comp-one',
 
-    loadComponent: () => import('./components/comp-one.component.ts').then(c => c.ComponentOne)
+//     loadComponent: () => import('./components/comp-one.component.ts').then(c => c.ComponentOne)
 
-  },
+//   },
 
-  {
+//   {
 
-    path: '',
+//     path: '',
 
-    loadComponent: () => import('./components/comp-two.component.ts’).then(c => c.ComponentTwo),
+//     loadComponent: () => import('./components/comp-two.component.ts’).then(c => c.ComponentTwo),
 
-    pathMatch: 'full'
+//     pathMatch: 'full'
 
-  }
+//   }
 
-];
-const routes: Route[] = [
+// ];
+// const routes: Route[] = [
 
-    {
+//     {
 
-      path: 'my-feature',
+//       path: 'my-feature',
 
-      loadChildren: () => import('./my-feature.routes.ts').then(m => m.MY_FEATURE_ROUTES),
+//       loadChildren: () => import('./my-feature.routes.ts').then(m => m.MY_FEATURE_ROUTES),
 
-      providers: [
+//       providers: [
 
-        importProvidersFrom(
+//         importProvidersFrom(
 
-          StoreModule.forFeature('my-feature', featureReducer)
+//           StoreModule.forFeature('my-feature', featureReducer)
 
-        )
+//         )
 
-      ]
+//       ]
 
-    }
+//     }
 
-  ];
+//   ];
 
-  bootstrapApplication(
+//   bootstrapApplication(
 
-    AppComponent,
+//     AppComponent,
 
-    {
+//     {
 
-       providers: [
+//        providers: [
 
-         importProvidersFrom(
+//          importProvidersFrom(
 
-           RouterModule.forRoot(routes),
+//            RouterModule.forRoot(routes),
 
-           StoreModule.forRoot({}),
+//            StoreModule.forRoot({}),
 
-           EffectsModule.forRoot([]),
+//            EffectsModule.forRoot([]),
 
-           StoreDevtoolsModule.instrument({}),
+//            StoreDevtoolsModule.instrument({}),
 
-           HttpClientModule,
+//            HttpClientModule,
 
-           BrowserAnimationsModule
+//            BrowserAnimationsModule
 
-         )
+//          )
 
-      ]
+//       ]
 
-    }
+//     }
 
-  )
+//   )
 
-  Old Way
+//   Old Way
 
-  @NgModule({
+//   @NgModule({
 
-     imports: [
+//      imports: [
 
-       CommonModule /* This is an Angular Module that allows what is 
+//        CommonModule /* This is an Angular Module that allows what is 
 
-                     exported form this module to be used 
+//                      exported form this module to be used 
 
-                     in other modules */
+//                      in other modules */
 
-     ],
+//      ],
 
-     declarations: [
+//      declarations: [
 
-       MyComponent
+//        MyComponent
 
-     ],
+//      ],
 
-     exports: [ // Anything in this array allows us to use in other modules
+//      exports: [ // Anything in this array allows us to use in other modules
 
-       MyComponent
+//        MyComponent
 
-     ]
+//      ]
 
-   })
+//    })
 
-   export class MyModule(){}
+//    export class MyModule(){}
 
-    @Component({
+//     @Component({
 
-       selector: 'my-comp',
+//        selector: 'my-comp',
 
-       template: `<div></div>`,
+//        template: `<div></div>`,
 
-       styleUrls: ['./my-component.component.scss']
+//        styleUrls: ['./my-component.component.scss']
 
-    })
+//     })
 
-    export class MyComponent{}
+//     export class MyComponent{}
 
-To use it in a new different feature you would do:
+// To use it in a new different feature you would do:
 
-  @NgModule({
+//   @NgModule({
 
-     imports: [
+//      imports: [
 
-       CommonModule,
+//        CommonModule,
 
-       MyModule
+//        MyModule
 
-     ]
+//      ]
 
-   })
+//    })
 
-   export class NewModule{}
+//    export class NewModule{}
 
-New Way
+// New Way
 
-@Component({
+// @Component({
 
-  selector: 'my-comp',
+//   selector: 'my-comp',
 
-  template: '<div></div>',
+//   template: '<div></div>',
 
-  styleUrls: ['./my-component.component.scss'],
+//   styleUrls: ['./my-component.component.scss'],
 
-  standalone: 'true',
+//   standalone: 'true',
 
-  imports: [
+//   imports: [
 
-    CommonModule
+//     CommonModule
 
-  ],
+//   ],
 
-  exportAs: 'my-comp'
+//   exportAs: 'my-comp'
 
-})
+// })
 
-export class MyComponent(){}
+// export class MyComponent(){}
 
-To use it from a legacy module you could do:
+// To use it from a legacy module you could do:
 
-@NgModule({
+// @NgModule({
 
-  imports: [
+//   imports: [
 
-    CommonModule,
+//     CommonModule,
 
-    MyComponent
+//     MyComponent
 
-  ]
+//   ]
 
-})
+// })
 
-export class NewModule{}
+// export class NewModule{}
