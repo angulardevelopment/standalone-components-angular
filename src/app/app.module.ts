@@ -11,9 +11,11 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
 
     // DummyComponent
+  
+    
   ],
   imports: [
     RouterModule,
@@ -21,12 +23,12 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     
     StandaloneDemoComponent,
-    TestModule,
-  
+    TestModule, // To use it in a new different feature you would do this
+
     
-    // BrowserAnimationsModule
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
 export class AppModule { }
