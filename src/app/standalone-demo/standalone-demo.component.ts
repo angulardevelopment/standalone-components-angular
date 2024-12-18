@@ -5,7 +5,7 @@ import { DummyComponent } from '../dummy/dummy.component';
 @Component({
   standalone: true,
   selector: 'app-standalone-demo',
-  // imports: [DummyComponent, ],// MatButtonModule
+  // imports: [DummyComponent, ],// MatButtonModule // Selector Matching
   templateUrl: './standalone-demo.component.html',
   styleUrls: ['./standalone-demo.component.scss']
 })

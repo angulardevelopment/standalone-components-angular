@@ -2,5 +2,36 @@
 {{percentage}}
 <button (click)="loadForm()">lazy</button>
 <div #formComponent></div>
+<input @NgModel( [value]="name" required )>
+
+<!-- {{ (user as RegisteredUser).email }}
+
+Angular expressions should be plain TS expressions
+Type-cast support (a as b) – only $any(a)
+Generic support (fn<T>())
+Literal notation (1e5)
+Arrow functions
+Postfix operators
+in operator
+instanceof operator
+Object literal capabilities (spread, etc)
+Optional chaining semantics are different
+Bitwise OR (a | b)
+typeof
+@if (user.kind === UserKind.Admin) { … } -->
+
+<!-- <script lang="ts">
+  const isChecked = model(false);
+
+  function toggle() {
+    isChecked.update(c => !c);
+  }
+</script>
+
+<template>
+  <input [checked]="isChecked" (click)="toggle()">
+</template> -->
+
+
 <!-- <router-outlet></router-outlet> -->
 

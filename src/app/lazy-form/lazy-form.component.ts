@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-lazy-form',
   templateUrl: './lazy-form.component.html',
-  styleUrls: ['./lazy-form.component.css']
+  styleUrls: ['./lazy-form.component.css'],
+  standalone: false,
 })
 export class LazyFormComponent implements OnInit {
 
