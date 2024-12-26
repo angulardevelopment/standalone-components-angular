@@ -22,6 +22,7 @@ I'm Sam, and I'm passionate about product engineering and web development. I cre
 standalone components demo.
 https://stackblitz.com/edit/angular-ivy-gyt19n - old way to use modules.
 ng g component one --module=myfeature/myfeature.module.ts
+ng g module [module-name] --routing
 "@angular/animations
 
 ## Subscribe and Stay Updated!
