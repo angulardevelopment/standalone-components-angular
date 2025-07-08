@@ -1,10 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ViewContainerRef } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  standalone: true
+  standalone: true,
+  imports: [FormsModule, CommonModule],
 })
 export class AppComponent {
   totalMarks = 1000;
@@ -28,6 +31,14 @@ export class AppComponent {
 
   ngAfterViewInit() {
     this.loadForm();
+    console.log('A');
+
+setTimeout(() => console.log('B'), 0);
+
+Promise.resolve().then(() => console.log('C'));
+
+console.log('D');
+
   }
 
 

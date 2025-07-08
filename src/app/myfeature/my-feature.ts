@@ -18,7 +18,7 @@ export const routes: Route[] = [
 
     component: TwoComponent,
 
-    pathMatch: 'full'
+//     pathMatch: 'full'
 
   }
 

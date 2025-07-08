@@ -16,7 +16,7 @@ export const MY_FEATURE_ROUTES: Route[] = [
 
     loadComponent: () => import('./components/two/two.component').then(c => c.TwoComponent),
 
-    pathMatch: 'full'
+//     pathMatch: 'full'
 
   }
 

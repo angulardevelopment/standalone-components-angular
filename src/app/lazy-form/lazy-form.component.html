@@ -1,3 +1,26 @@
-<p>
-lazy-form works!
-</p>
+<div class="visualizer">
+  <h2>JavaScript Event Loop Visualizer</h2>
+
+  <div class="section">
+    <h3>Call Stack</h3>
+    <div class="box stack">
+      <div *ngFor="let item of callStack" class="item">{{ item }}</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Microtask Queue</h3>
+    <div class="box microtask">
+      <div *ngFor="let item of microtaskQueue" class="item">{{ item }}</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Task Queue</h3>
+    <div class="box task">
+      <div *ngFor="let item of taskQueue" class="item">{{ item }}</div>
+    </div>
+  </div>
+
+  <button (click)="runSimulation()">▶ Run Simulation</button>
+</div>

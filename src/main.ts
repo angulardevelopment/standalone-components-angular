@@ -7,8 +7,9 @@ import { AppModule } from './app/app.module';
 import { DummyComponent } from './app/dummy/dummy.component';
 import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
-import { RouterModule } from '@angular/router';
+import { provideRouter, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ROUTES } from './app/app.routes';
 
 if (environment.production) {
   enableProdMode();
@@ -16,8 +17,6 @@ if (environment.production) {
 
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
-
-// bootstrapApplication(DummyComponent);
 
   bootstrapApplication(
 
@@ -38,7 +37,8 @@ if (environment.production) {
 
            BrowserAnimationsModule
 
-         )
+         ),
+  provideRouter(ROUTES)
 
       ]
 
