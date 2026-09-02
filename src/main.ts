@@ -18,33 +18,17 @@ if (environment.production) {
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
 
-  bootstrapApplication(
+bootstrapApplication(
+  AppComponent,
 
-    AppComponent,
+  {
+    providers: [
+      importProvidersFrom(
+        HttpClientModule,
 
-    {
-
-       providers: [
-
-         importProvidersFrom(
-
-           
-
-
-
-
-           HttpClientModule,
-
-           BrowserAnimationsModule
-
-         ),
-  provideRouter(ROUTES)
-
-      ]
-
-    }
-
-  )
-
-
-
+        BrowserAnimationsModule,
+      ),
+      provideRouter(ROUTES),
+    ],
+  },
+);
