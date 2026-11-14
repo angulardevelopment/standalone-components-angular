@@ -23,7 +23,79 @@ standalone components demo.
 https://stackblitz.com/edit/angular-ivy-gyt19n - old way to use modules.
 ng g component one --module=myfeature/myfeature.module.ts
 ng g module [module-name] --routing
+npx compodoc -p tsconfig.json -s
+
 "@angular/animations
+├── README.md
+├── angular.json
+├── karma.conf.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── app
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   ├── app.module.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.service.ts
+│   │   ├── appConfig.ts
+│   │   ├── dummy
+│   │   │   ├── dummy.component.html
+│   │   │   ├── dummy.component.scss
+│   │   │   ├── dummy.component.spec.ts
+│   │   │   └── dummy.component.ts
+│   │   ├── lazy-form
+│   │   │   ├── lazy-form.component.css
+│   │   │   ├── lazy-form.component.html
+│   │   │   └── lazy-form.component.ts
+│   │   ├── myfeature
+│   │   │   ├── components
+│   │   │   │   ├── one
+│   │   │   │   │   ├── one.component.html
+│   │   │   │   │   ├── one.component.scss
+│   │   │   │   │   ├── one.component.spec.ts
+│   │   │   │   │   └── one.component.ts
+│   │   │   │   └── two
+│   │   │   │       ├── two.component.html
+│   │   │   │       ├── two.component.scss
+│   │   │   │       ├── two.component.spec.ts
+│   │   │   │       └── two.component.ts
+│   │   │   ├── my-feature.routes.ts
+│   │   │   ├── my-feature.ts
+│   │   │   └── myfeature.module.ts
+│   │   ├── standalone-demo
+│   │   │   ├── standalone-demo.component.html
+│   │   │   ├── standalone-demo.component.scss
+│   │   │   ├── standalone-demo.component.spec.ts
+│   │   │   └── standalone-demo.component.ts
+│   │   └── test
+│   │       ├── my
+│   │       │   ├── my.component.html
+│   │       │   ├── my.component.scss
+│   │       │   ├── my.component.spec.ts
+│   │       │   └── my.component.ts
+│   │       ├── my-new
+│   │       │   ├── my-new.component.html
+│   │       │   ├── my-new.component.scss
+│   │       │   ├── my-new.component.spec.ts
+│   │       │   └── my-new.component.ts
+│   │       └── test.module.ts
+│   ├── assets
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.scss
+│   └── test.ts
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
 
 ## Subscribe and Stay Updated!
 

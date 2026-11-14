@@ -1,26 +1,23 @@
 import { Route } from '@angular/router';
 
 export const ROUTES: Route[] = [
-
   {
-  // path: 'admin', 
-  path: '', 
+    // path: 'admin',
+    path: '',
 
-  loadComponent: () => import('./dummy/dummy.component').then(mod => mod.DummyComponent)
-},
-  {
+    loadComponent: () =>
+      import('./dummy/dummy.component').then((mod) => mod.DummyComponent),
+  },
+  {
+    path: 'my-feature',
 
-      'path': 'my-feature',
-  
-      loadChildren: () => import('./myfeature/myfeature.module').then(m => m.MyfeatureModule)
-  
-    },
-    {
+    loadChildren: () =>
+      import('./myfeature/myfeature.module').then((m) => m.MyfeatureModule),
+  },
+  {
+    path: '',
 
-        'path': '',
-    
-        redirectTo: 'my-feature',
-        pathMatch: 'full'
-    
-      }
+    redirectTo: 'my-feature',
+    pathMatch: 'full',
+  },
 ];

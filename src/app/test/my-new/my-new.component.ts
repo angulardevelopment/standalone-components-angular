@@ -5,22 +5,14 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-my-new',
   templateUrl: './my-new.component.html',
   styleUrls: ['./my-new.component.scss'],
-    standalone: true,
+  standalone: true,
 
-  imports: [
+  imports: [CommonModule],
 
-    CommonModule
-
-  ],
-
-  exportAs: 'my-comp'
+  exportAs: 'my-comp',
 })
 export class MyNewComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
-
